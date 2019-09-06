@@ -1,5 +1,4 @@
 const path = require('path');
-const fs = require('fs');
 const csvParser = require('../utils/csv-parser');
 const cryptoUtil = require('../utils/crypto-util');
 const sessionMemory = require('../db/sessionMemory');
