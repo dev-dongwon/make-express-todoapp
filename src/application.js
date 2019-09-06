@@ -10,7 +10,7 @@ const Application = class {
     });
   }
 
-  listen(port=3000, host='localhost', fn) {
+  listen(port, host, fn) {
     this.server.listen(port, host, fn);
     debug('server is listening');
   }
