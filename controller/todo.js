@@ -28,7 +28,7 @@ const addTodo = () => async (req, res, next) => {
   let keyObj = await csvParser.getKeyValue('./db/keys.csv');
   const cardKey = keyObj.cardKey;
   
-  const dataStr = `\r\n${cardKey},${type},${data},${userID}`;
+  const dataStr = `\n${cardKey},${type},${data},${userID}`;
 
   await fileHandler.appendFile('./db/todoList.csv', dataStr);
   await updateTodoKey(keyObj, './db/keys.csv');
@@ -45,7 +45,7 @@ const deleteTodo = () => async (req, res, next) => {
   const dataStr = Object.keys(allTodoData).reduce((acc, key) => {
     const data = allTodoData[key];
     const string = `${key},${data['type']},${data['content']},${data['userID']}`;
-    acc += `\r\n${string}`;
+    acc += `\n${string}`;
     return acc;
   },`cardNo,type,content,userID`);
 
@@ -65,7 +65,7 @@ const updateTodo = () => async (req, res, next) => {
   const dataStr = Object.keys(allTodoData).reduce((acc, key) => {
     const data = allTodoData[key];
     const string = `${key},${data['type']},${data['content']},${data['userID']}`;
-    acc += `\r\n${string}`;
+    acc += `\n${string}`;
     return acc;
   },`cardNo,type,content,userID`);
 
@@ -85,7 +85,7 @@ const updateCardSequence = () => async (req, res, next) => {
   const dataStr = Object.keys(allSequence).reduce((acc, key) => {
     const data = allSequence[key];
     const string = `${key},${data['todo']},${data['doing']},${data['done']}`;
-    acc += `\r\n${string}`;
+    acc += `\n${string}`;
     return acc;
   },`id,todo,doing,done`);
 

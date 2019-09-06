@@ -36,7 +36,7 @@ const isDupleId = async (inputId) => {
 
 const submitRegisterInfo = () => async (req, res, next) => {
   const {id, password} = (req.body);
-  const csvDataStr = `\r\n${id},${password}`;
+  const csvDataStr = `\n${id},${password}`;
 
   const isDupleID = await isDupleId(id);
 
