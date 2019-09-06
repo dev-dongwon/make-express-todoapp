@@ -1,7 +1,9 @@
+require('dotenv').config()
+
 const debug = require('./utils/debug')('bin');
 const app = require('./app');
 
-const hostname = '127.0.0.1';
+const hostname = process.env.HOST
 const port = process.env.PORT || 3000;
 
 app.listen(port, hostname, () => {
