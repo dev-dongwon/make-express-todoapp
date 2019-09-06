@@ -4,6 +4,7 @@
   "description": "todoapp - vanilla http server in node.js",
   "main": "binistanbul c.js",
   "directories": {
+    "start":"node ./bin.js",
     "test": "test"
   },
   "dependencies": {
