@@ -1,5 +1,3 @@
-[![Build Status](https://travis-ci.org/dev-dongwon/todoapp.svg?branch=master)](https://travis-ci.org/dev-dongwon/todoapp)
-
 # TODO APP with Node.js
 
 순수 node.js 만으로 **express의 미들웨어 패턴**을 구현해 todo app을 만들어보자!
